@@ -1,0 +1,12 @@
+pipkine{
+  agent any
+  stages{
+    stage('build'){
+      step{
+        echo 'running build automation'
+        sh './gradelw build --no--daemon'
+        arciveArtifacts artifacts: 'dist/trainSchedule.zip '
+      }
+    }
+  }
+}
